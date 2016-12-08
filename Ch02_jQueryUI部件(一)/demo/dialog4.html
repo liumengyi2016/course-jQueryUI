@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery UI Dialog Example 3</title>
+</head>
+<body>
+    <div id="myDialog" class="flora" title="标题">
+    	梦想它默默地在一天天里壮大生长，每当我以为自己的世界仅此而已时，而它却会带着我走进另一个更大的世界。所以不管怎样，梦想还是要有的，万一实现了呢？
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			var dialogOpts = {
+				modal: true,
+				overlay: {
+					background: "url(img/modal.png) repeat" 
+				}
+			};
+			
+			$("#myDialog").dialog(dialogOpts);
+			});
+	</script>
+</body>
+</html>

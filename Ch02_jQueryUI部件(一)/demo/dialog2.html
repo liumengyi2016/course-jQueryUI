@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/dialogTheme.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery UI Dialog Example 2</title>
+</head>
+<body>
+    <div id="myDialog" class="flora" title="This is the title">
+        对话框是一个悬浮窗口，包括一个标题栏和一个内容区域。对话框窗口可以移动，重新调整大小，默认情况下通过 'x' 图标关闭。如果内容长度超过最大高度，一个滚动条会自动出现。一个底部按钮栏和一个半透明的模式覆盖层是常见的添加选项。
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#myDialog").dialog();
+        });
+    </script>
+</body>
+</html>
