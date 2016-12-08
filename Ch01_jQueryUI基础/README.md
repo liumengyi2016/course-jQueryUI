@@ -1,6 +1,5 @@
-# Ch01 XX
-Ch01 XX 的简介
+﻿# Ch01_jQueryUI基础
 
-## 通关任务
+@[jQuery UI简介|jQuery UI下载|选项卡控件|Accordion控件]
 
-- [任务 1](task1.md)
+本章节为jQueryUI课程的第一节课，主要内容为jQueryUI基础，课程内容包括jQuery UI简介、jQuery UI下载、选项卡控件、Accordion控件等。

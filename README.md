@@ -1,5 +1,16 @@
-﻿# Ch01_jQueryUI基础
+# jQueryUI
+jQueryUI 课程简介有待补充。
 
-@[jQuery UI简介|jQuery UI下载|选项卡控件|Accordion控件]
+## 课程大纲
+### [01. 第 01 章节标题](*)
 
-本章节为jQueryUI课程的第一节课，主要内容为jQueryUI基础，课程内容包括jQuery UI简介、jQuery UI下载、选项卡控件、Accordion控件等。
+【简单介绍，有待补充】
+
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](*) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/code.png" height="15"> Demos](/Topics/04. Stylus/demos) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/homework.png" height="15">Tasks](/Topics/04. Stylus/homework) / [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/video.png" height="13"> Videos](/Topics/04. Stylus/VIDEOS.md)
+
+
+## 学习资料
+
+- [视频课程有待补充](*)
+- [在线练习有待补充](*)
+- [文字教程有待补充](*)
