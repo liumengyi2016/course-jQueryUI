@@ -1,5 +1,5 @@
 ﻿# jQueryUI
-jQueryUI 课程简介有待补充。
+jQuery UI 是一个建立在 jQuery JavaScript 库上的小部件和交互库，可以使用它创建高度交互的 Web 应用程序。
 
 ## 课程大纲
 ### [01. jQueryUI基础](/Ch01_jQueryUI基础)
