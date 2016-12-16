@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery UI Date Picker Example 3</title>
+</head>
+<body>
+    <label>选择日期: </label><input id="date">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			var pickerOpts = {
+				appendText: " MM/DD/YYYY",
+				firstDay:1,
+				changeFirstDay: false,
+				changeMonth: true,
+				changeYear: false,
+				closeAtTop: false,
+				showOtherMonths: true,
+				showStatus: true,
+				showWeeks: true,
+				duration: "fast",
+				numberOfMonths: 2
+			};
+
+			$("#date").datepicker(pickerOpts);
+		});
+	</script>
+</body>
+</html>

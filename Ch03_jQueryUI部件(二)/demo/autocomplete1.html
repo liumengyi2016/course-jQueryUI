@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="style/myAutocomplete.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery UI Auto Complete Widget Example 1</title>
+  </head>
+  <body>
+    <label for="suggest">选择一个编程语言:</label>
+    <input type="text" id="suggest">
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript">
+			$(function() {
+				var Opts = {
+					source :[ "c", "c++", "java", "php", "c#", "", "javascript", "asp", "ruby" ]
+				};
+
+				$("#suggest").autocomplete(Opts);
+			});
+		</script>
+  </body>
+</html>

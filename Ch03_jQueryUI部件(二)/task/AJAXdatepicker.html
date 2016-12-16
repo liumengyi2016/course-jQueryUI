@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/dialogTheme.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jQuery UI AJAX Date Picker</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>使用日期选择器选择可行时间</p>
+      <label>预定日期:</label>
+      <input id="date">
+      <div class="key"></div>
+<!--      <label class="keyLabel"> = 已经预定</label>-->
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript">
+			$(function(){
+				//arrays to hold ajax dates
+				var months = [];
+				var days = [];
+				
+				//get pre-booked dates from server
+				function getDates() {				 
+					$.getJSON("http://www.danwellman.co.uk/bookedDates.php?jsoncallback=?",	
+					function(data) {
+						//process results
+						for (x = 0; x < data.dates.length; x++) {
+							//put results into arrays
+							months.push(data.dates[x].month);
+							days.push(data.dates[x].day);
+						}
+					});
+				}	
+				getDates();
+								
+				//定义日期选择器的配置对象
+				var pickerOpts = {
+					beforeShowDay: addDates,  //回调属性beforeShowDay，在所有日期被单元被显示时触发
+					minDate: +1   //预定日期不能是已过去的或当天日期
+				};
+				
+				$("#date").datepicker(pickerOpts);
+															
+				//add pre-booked dates to datepicker
+				function addDates(date){	
+					//filter out weekends
+					if (date.getDay() == 0 || date.getDay() == 6) {
+						return [false, "weekend_class"];		  
+					}
+					
+					//check each day in arrays
+					for (x = 0; x < days.length; x++) {
+						//if date is same as current day...
+						if (date.getMonth() == months[x] - 1 && date.getDate() == days[x]) {
+							//make day unselectable
+							return [false, "preBooked_class"];
+						}
+					}
+					
+					//other dates are selectable
+					return [true, '']; 
+				}		
+			});
+		</script>
+  </body>
+</html>

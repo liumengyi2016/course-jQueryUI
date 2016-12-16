@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  	<meta charset="utf-8">
+  	<title>jQuery UI 自动完成（Autocomplete） - 分类</title>
+  	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+  	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+  	<style>
+		  .ui-autocomplete-category {
+		    font-weight: bold;
+		    padding: .2em .4em;
+		    margin: .8em 0 .2em;
+		    line-height: 1.5;
+		  }
+  	</style>
+  	<script>
+	  	$.widget( "custom.catcomplete", $.ui.autocomplete, {
+		    _renderMenu: function( ul, items ) {
+		      var that = this,
+		        currentCategory = "";
+		      $.each( items, function( index, item ) {
+		        if ( item.category != currentCategory ) {
+		          ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+		          currentCategory = item.category;
+		        }
+		        that._renderItemData( ul, item );
+		      });
+		    }
+	  	});
+  	</script>
+  	<script>
+	  $(function() {
+	    var data = [
+	      { label: "anders", category: "" },
+	      { label: "andreas", category: "" },
+	      { label: "antal", category: "" },
+	      { label: "annhhx10", category: "产品" },
+	      { label: "annk K12", category: "产品" },
+	      { label: "annttop C13", category: "产品" },
+	      { label: "张三", category: "姓名" },
+	      { label: "李四", category: "姓名" },
+	      { label: "张二", category: "姓名" },
+	      { label: "张一", category: "姓名" }
+	    ];
+	 
+	    $( "#search" ).catcomplete({
+	      delay: 0,
+	      source: data,
+	      multiple: true,
+		  multipleSeparator: " + "
+	    });
+	  });
+	  </script>
+	</head>
+	<body>
+		<label for="search">搜索：</label>
+		<input id="search">
+	</body>
+</html>
